@@ -7,6 +7,7 @@ import Contact from "./sections/Contact.jsx";
 import Footer from "./sections/Footer.jsx";
 import Experience from "./sections/Experience.jsx";
 import Computer from "./sections/Computer.jsx";
+import Certificates from "./sections/Certificates.jsx";
 const App = () => {
     return (
         <main className="max-w-7xl mx-auto">
@@ -15,6 +16,7 @@ const App = () => {
             <About />
             <Computer />
             { /*<Projects />*/ }
+            <Certificates />
             <Clients />
             <Experience />
             <Contact />
