@@ -1,12 +1,10 @@
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
-
 import useAlert from '../hooks/useAlert.js';
 import Alert from '../components/Alert.jsx';
 
 const Contact = () => {
     const formRef = useRef();
-
     const { alert, showAlert, hideAlert } = useAlert();
     const [loading, setLoading] = useState(false);
 
@@ -68,8 +66,16 @@ const Contact = () => {
         <section className="c-space my-20" id="contact">
             {alert.show && <Alert {...alert} />}
 
-            <div className="relative min-h-screen flex items-center justify-center flex-col">
-                <img src="/assets/terminal.png" alt="terminal-bg" className="absolute inset-0 min-h-[162vh] sm:min-h-[140vh] md:min-h-[155vh] xl:min-h-[135vh]" />
+            <div className="relative min-h-screen flex items-center justify-center flex-col h-[120vh]">
+                {/* Set a fixed height directly here */}
+                <img
+                    src="/assets/terminal.png"
+                    alt="terminal-bg"
+                    className="absolute inset-0 w-full"
+                    style={{
+                        height: "130vh", // Fixed height, adjust as necessary
+                    }}
+                />
 
                 <div className="contact-container">
                     <h3 className="head-text pt-10">Let's talk</h3>

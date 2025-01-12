@@ -10,16 +10,28 @@ import { workExperiences } from '../constants/index.js';
 const WorkExperience = () => {
     const [animationName, setAnimationName] = useState('idle');
 
-    // Use the useMediaQuery hook to detect mobile screens
-    const isMobile = useMediaQuery({ maxWidth: 768 }); // Adjust the maxWidth as needed for your breakpoints
+    // Detect mobile screens
+    const isMobile = useMediaQuery({ maxWidth: 768 }); // Adjust breakpoint as needed
 
     return (
-        <section className="c-space my-20" id="work">
+        <section
+            className={`c-space my-20`}
+            id="work"
+            style={{
+                minHeight: isMobile ? '100vh' : '75vh', // Adjust container height for mobile
+            }}
+        >
             <div className="w-full text-white-600">
                 <p className="head-text">Tools I work with</p>
 
                 <div className="work-container">
-                    <div className="work-canvas">
+                    {/* Canvas Section */}
+                    <div
+                        className="work-canvas"
+                        style={{
+                            height: isMobile ? '70vh' : '60vh', // Adjust canvas height dynamically
+                        }}
+                    >
                         <Canvas>
                             <ambientLight intensity={7} />
                             <spotLight position={[10, 10, 10]} angle={0.15} penumbra={1} />
@@ -28,14 +40,15 @@ const WorkExperience = () => {
 
                             <Suspense fallback={<CanvasLoader />}>
                                 <Developer
-                                    position-y={-3}
-                                    scale={3} // Adjust the scale based on isMobile
+                                    position-y={isMobile ? -1.5 : -3} // Adjust vertical position for mobile
+                                    scale={isMobile ? 2.5 : 3} // Larger scale on mobile
                                     animationName={animationName}
                                 />
                             </Suspense>
                         </Canvas>
                     </div>
 
+                    {/* Work Content Section */}
                     <div className="work-content">
                         <div className="sm:py-10 py-5 sm:px-5 px-2.5">
                             {workExperiences.map((item, index) => (
@@ -44,7 +57,8 @@ const WorkExperience = () => {
                                     onClick={() => setAnimationName(item.animation.toLowerCase())}
                                     onPointerOver={() => setAnimationName(item.animation.toLowerCase())}
                                     onPointerOut={() => setAnimationName('idle')}
-                                    className="work-content_container group">
+                                    className="work-content_container group"
+                                >
                                     <div className="flex flex-col h-full justify-start items-center py-2">
                                         <div className="work-content_logo">
                                             <img className="w-full h-full" src={item.icon} alt="" />
