@@ -250,10 +250,10 @@ export const calculateSizes = (isSmall, isMobile, isTablet) => {
     return {
         deskScale: isSmall ? 0.05 : isMobile ? 0.06 : 0.065,
         deskPosition: isMobile ? [0.5, -4.5, 0] : [0.25, -5.5, 0],
-        cubePosition: isSmall ? [6, -5, 0] : isMobile ? [7.5, -2, 0] : isTablet ? [10, -5, 0] : [15, -5.5, 0],
-        reactLogoPosition: isSmall ? [3, 4, 0] : isMobile ? [5, 4, 0] : isTablet ? [8, 4, 0] : [12, 3, 0],
-        ringPosition: isSmall ? [-5, 7, 0] : isMobile ? [-12, 6.3, 0] : isTablet ? [-20, 7, 0] : [-30, 7, 0],
-        targetPosition: isSmall ? [-5, -10, -10] : isMobile ? [-12, -5, -10] : isTablet ? [-12, -7, -10] : [-20, -13, -10],
+        cubePosition: isSmall ? [5.3, -5.5, 0] : isMobile ? [7.5, -2, 0] : isTablet ? [10, -5, 0] : [15, -5.5, 0],
+        reactLogoPosition: isSmall ? [1.5, 3, 0] : isMobile ? [8, 4, 0] : isTablet ? [8, 4, 0] : [12, 3, 0],
+        ringPosition: isSmall ? [-7.5, 6, 0] : isMobile ? [-12, 6.3, 0] : isTablet ? [-20, 7, 0] : [-30, 7, 0],
+        targetPosition: isSmall ? [-8, -10, -10] : isMobile ? [-12, -5, -10] : isTablet ? [-12, -7, -10] : [-20, -13, -10],
     };
 };
 

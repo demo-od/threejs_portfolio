@@ -39,8 +39,8 @@ const About = () => {
 
                         <div>
                             <p className={`grid-headtext`}>Tech Stack</p>
-                            <p className={`grid-subtext`}>I specialize in JavaScript with a focus on React and
-                                I build mobile and desktop apps with the Flutter SDK.</p>
+                            <p className={`grid-subtext`}>I specialize in JavaScript with a focus on the React ecosystem.
+                                I also build mobile and desktop apps with Dart and Flutter.</p>
                         </div>
                     </div>
                 </div>
