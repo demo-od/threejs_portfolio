@@ -66,7 +66,7 @@ const Contact = () => {
         <section className="c-space my-20" id="contact">
             {alert.show && <Alert {...alert} />}
 
-            <div className="relative min-h-screen flex items-center justify-center flex-col h-screen">
+            <div className="relative flex items-center justify-center flex-col">
                 {/* Set a fixed height directly here */}
 
 
