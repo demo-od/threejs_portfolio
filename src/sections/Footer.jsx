@@ -1,4 +1,5 @@
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
     return (
         <section className={`c-space pt-7 pb-3 border-t
         border-black-300 flex justify-between items-center
@@ -22,7 +23,7 @@ const Footer = () => {
                     </a>
                 </div>
             </div>
-            <p className={`text-white-500`}>© 2024 Odusanya Ademola. All rights reserved</p>
+            <p className={`text-white-500`}>© {currentYear} Odusanya Ademola. All rights reserved</p>
         </section>
     )
 }

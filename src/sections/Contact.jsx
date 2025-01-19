@@ -68,16 +68,9 @@ const Contact = () => {
 
             <div className="relative min-h-screen flex items-center justify-center flex-col h-[120vh]">
                 {/* Set a fixed height directly here */}
-                <img
-                    src="/assets/terminal.png"
-                    alt="terminal-bg"
-                    className="absolute inset-0 w-full"
-                    style={{
-                        height: "130vh", // Fixed height, adjust as necessary
-                    }}
-                />
 
-                <div className="contact-container">
+
+                <div className="contact-container bg-black-200 p-10 rounded-lg">
                     <h3 className="head-text pt-10">Let's talk</h3>
                     <p className="text-lg text-white-600 mt-3">
                         Whether you’re looking to build a new website, improve your existing platform, or bring a unique project to
