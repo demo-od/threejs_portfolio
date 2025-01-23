@@ -20,7 +20,7 @@ const Certificates = () => {
     }, []);
 
     return (
-        <section className="c-space my-20">
+        <section className="c-space my-20" id={`certificates`}>
             <h3 className="head-text text-center">My Certificates</h3>
 
             <div className="client-container">
